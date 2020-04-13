@@ -20,6 +20,7 @@ c.execute("""CREATE TABLE addresses (
         state text,
         zipcode integer
         )""")
+    
         
 
 
