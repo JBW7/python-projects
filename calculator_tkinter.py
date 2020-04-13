@@ -10,6 +10,7 @@ entry = Entry(screen, width=60, borderwidth=5)
 entry.grid(row=0, column=0, columnspan=4)
 
 
+
 #button function
 def button_click(number):
     current= entry.get()
