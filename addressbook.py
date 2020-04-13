@@ -12,6 +12,7 @@ conn = sqlite3.connect("address_book.db")
 c = conn.cursor()
 
 # create table
+'''
 c.execute("""CREATE TABLE addresses (
 		first_name text,
         last_name text, 
@@ -20,12 +21,9 @@ c.execute("""CREATE TABLE addresses (
         state text,
         zipcode integer
         )""")
-    
-        
-
-
-
-# submit button
+'''
+ 
+ # submit button
 def submit():
     # create a database/connect to one
     conn = sqlite3.connect("address_book.db")
@@ -58,8 +56,31 @@ def submit():
     state.delete(0, END)
     zipcode.delete(0, END)
 
+# record button
+def records():
+	# create a database/connect to one
+    conn = sqlite3.connect("address_book.db")
 
+    # create cursor
+    c = conn.cursor()
+    
+    #select data from database
+    c.execute("SELECT *, oid FROM addresses")
+    records = c.fetchall()
+    print(records)
 
+    # loop through results
+    print_records = ""
+    for  record in records:
+    	print_records += str(record) + "\n"
+
+    record_label = Label(screen, text = print_records)
+    record_label.grid(row= 8, column= 0, columnspan= 2)
+    # commit changes
+    conn.commit()
+
+    # close connection
+    conn.close()
 
 # text box
 f_name = Entry(screen, width= 30)
@@ -103,10 +124,9 @@ zipcode_label.grid(row= 5, column= 0)
 submit_button = Button(screen, text = "Add Data To Database", command = submit)
 submit_button.grid(row= 6, column= 0, columnspan= 2, padx= 10, pady= 10, ipadx= 100)
 
-
-
-
-
+#records button
+record_button = Button(screen, text= "show records", command= records)
+record_button.grid(row= 7, column= 0, columnspan= 2, padx= 10, pady= 10, ipadx= 125)
 # commit changes
 conn.commit()
 
