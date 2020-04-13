@@ -1,16 +1,61 @@
 from tkinter import *
 import sqlite3
 
-
 screen = Tk()
 screen.geometry("400x400")
 
 
 # create a database/connect to one
-conn = sqlite3.connect("adress_book.db")
+conn = sqlite3.connect("address_book.db")
 
 # create cursor
 c = conn.cursor()
+
+# create table
+c.execute("""CREATE TABLE addresses (
+		first_name text,
+        last_name text, 
+        address text,
+        city text,
+        state text,
+        zipcode integer
+        )""")
+
+
+
+# submit button
+def submit():
+    # create a database/connect to one
+    conn = sqlite3.connect("address_book.db")
+
+    # create cursor
+    c = conn.cursor()
+    
+    # insert into table
+    c.execute("INSERT INTO addresses VALUES (:f_name, :l_name, :address, :city, :state, :zipcode)", 
+            {
+                "f_name": f_name.get(),
+                "l_name": l_name.get(),
+                "address": address.get(),
+                "city": city.get(),
+                "state": state.get(),
+                "zipcode": zipcode.get()
+            })
+   
+    # commit changes
+    conn.commit()
+
+    # close connection
+    conn.close()
+
+    # clear text box
+    f_name.delete(0, END)
+    l_name.delete(0, END)
+    address.delete(0, END)
+    city.delete(0, END)
+    state.delete(0, END)
+    zipcode.delete(0, END)
+
 
 
 
@@ -52,41 +97,7 @@ state_label.grid(row= 4, column= 0)
 zipcode_label = Label(screen, text = "Zipcode")
 zipcode_label.grid(row= 5, column= 0)
 
-
-# submit button
-def submit():
-    # create a database/connect to one
-    conn = sqlite3.connect("adress_book.db")
-
-    # create cursor
-    c = conn.cursor()
-    
-    # insert into table
-    c.execute("INSERT INTO addresses VALUES (:f_name, :l_name, :address, :city, :state, :zipcode)", 
-            {
-                "f_name": f_name.get(),
-                "l_name": l_name.get(),
-                "address": address.get(),
-                "city": city.get(),
-                "state": state.get(),
-                "zipcode": zipcode.get()
-            })
-   
-    # commit changes
-    conn.commit()
-
-    # close connection
-    conn.close()
-
-    # clear text box
-    f_name.delete(0, END)
-    l_name.delete(0, END)
-    address.delete(0, END)
-    city.delete(0, END)
-    state.delete(0, END)
-    zipcode.delete(0, END)
-
-
+#button
 submit_button = Button(screen, text = "Add Data To Database", command = submit)
 submit_button.grid(row= 6, column= 0, columnspan= 2, padx= 10, pady= 10, ipadx= 100)
 
@@ -99,11 +110,5 @@ conn.commit()
 
 # close connection
 conn.close()
-
-screen.mainloop()
-
-
-
-
 
 screen.mainloop()
