@@ -43,6 +43,11 @@ def back(image_number):
 	back_button.grid(row = 1, column = 0)
 	next_button.grid(row = 1, column = 2)
 
+	# status bar
+	status_bar = Label(screen, text = "Image "+ str(image_number) + " of " + str(len(img_list)), bd = 1, relief = SUNKEN, anchor = E)
+	status_bar.grid(row = 2, column = 0, columnspan = 3, sticky = W + E)
+
+
 
 def next(image_number):
 	global label
@@ -61,7 +66,15 @@ def next(image_number):
 	back_button.grid(row = 1, column = 0)
 	next_button.grid(row = 1, column = 2)
 
+	# status bar
+	status_bar = Label(screen, text = "Image "+ str(image_number) + " of " + str(len(img_list)), bd = 1, relief = SUNKEN, anchor = E)
+	status_bar.grid(row = 2, column = 0, columnspan = 3, sticky = W + E)
 
+
+
+# status bar
+status_bar = Label(screen, text = "Image 1 of " + str(len(img_list)), bd = 1, relief = SUNKEN, anchor = E)
+status_bar.grid(row = 2, column = 0, columnspan = 3, sticky = W + E)
 
 
 
