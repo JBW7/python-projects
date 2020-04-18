@@ -4,10 +4,10 @@ import math
 
 screen = Tk()
 screen.title("calculator")
-
+screen.geometry("380x457")
 
 #entry
-entry = Entry(screen, width=60, borderwidth=5)
+entry = Entry(screen, width=40, borderwidth=5)
 entry.grid(row=0, column=0, columnspan=4)
 
 
@@ -105,26 +105,26 @@ def button_equal():
 
 
 #button
-button_1=Button(screen, text="1", padx=40, pady=20, command=lambda: button_click(1))
-button_2=Button(screen, text="2", padx=40, pady=20, command=lambda: button_click(2))
-button_3=Button(screen, text="3", padx=40, pady=20, command=lambda: button_click(3))
-button_4=Button(screen, text="4", padx=40, pady=20, command=lambda: button_click(4))
-button_5=Button(screen, text="5", padx=40, pady=20, command=lambda: button_click(5))
-button_6=Button(screen, text="6", padx=40, pady=20, command=lambda: button_click(6))
-button_7=Button(screen, text="7", padx=40, pady=20, command=lambda: button_click(7))
-button_8=Button(screen, text="8", padx=40, pady=20, command=lambda: button_click(8))
-button_9=Button(screen, text="9", padx=40, pady=20, command=lambda: button_click(9))
-button_0=Button(screen, text="0", padx=40, pady=20, command=lambda: button_click(0))
-button_add=Button(screen, text="+", padx=37, pady=20, command=button_add)
-button_substract=Button(screen, text="-", padx=39, pady=20, command=button_substract)
-button_multiply=Button(screen, text="X", padx=38, pady=20, command=button_multiply)
-button_divide=Button(screen, text="/", padx=39, pady=20, command=button_divide)
-button_equal=Button(screen, text="=", padx=39, pady=20, command=button_equal)
-button_clear=Button(screen, text="C", padx=39, pady=20, command=button_clear)
-button_sqrt=Button(screen, text="√", padx=39, pady=20, command=button_sqrt)
-button_power_to=Button(screen, text="^", padx=39, pady=20, command=button_power_to)
-button_percent=Button(screen, text="%", padx=38, pady=20, command=button_percent)
-button_pi=Button(screen, text="π", padx=37, pady=20, command=button_pi)
+button_1=Button(screen, text="1", height = 5, width = 10, command=lambda: button_click(1))
+button_2=Button(screen, text="2", height = 5, width = 10, command=lambda: button_click(2))
+button_3=Button(screen, text="3", height = 5, width = 10, command=lambda: button_click(3))
+button_4=Button(screen, text="4", height = 5, width = 10, command=lambda: button_click(4))
+button_5=Button(screen, text="5", height = 5, width = 10, command=lambda: button_click(5))
+button_6=Button(screen, text="6", height = 5, width = 10, command=lambda: button_click(6))
+button_7=Button(screen, text="7", height = 5, width = 10, command=lambda: button_click(7))
+button_8=Button(screen, text="8", height = 5, width = 10, command=lambda: button_click(8))
+button_9=Button(screen, text="9", height = 5, width = 10, command=lambda: button_click(9))
+button_0=Button(screen, text="0", height = 5, width = 10, command=lambda: button_click(0))
+button_add=Button(screen, text="+", height = 5, width = 10, command=button_add)
+button_substract=Button(screen, text="-", height = 5, width = 10, command=button_substract)
+button_multiply=Button(screen, text="X", height = 5, width = 10, command=button_multiply)
+button_divide=Button(screen, text="/", height = 5, width = 10, command=button_divide)
+button_equal=Button(screen, text="=", height = 5, width = 10, command=button_equal)
+button_clear=Button(screen, text="C", height = 5, width = 10, command=button_clear)
+button_sqrt=Button(screen, text="√", height = 5, width = 10, command=button_sqrt)
+button_power_to=Button(screen, text="^", height = 5, width = 10, command=button_power_to)
+button_percent=Button(screen, text="%", height = 5, width = 10, command=button_percent)
+button_pi=Button(screen, text="π", height = 5, width = 10, command=button_pi)
 
 
 button_1.grid(row=3, column=0 )
