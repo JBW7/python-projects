@@ -6,6 +6,7 @@ screen = Tk()
 screen.title("calculator")
 screen.geometry("380x457")
 
+
 #entry
 entry = Entry(screen, width=40, borderwidth=5)
 entry.grid(row=0, column=0, columnspan=4)
