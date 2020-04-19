@@ -2,7 +2,7 @@ from tkinter import *
 import sqlite3
 
 screen = Tk()
-screen.geometry("350x500")
+screen.geometry("400x500")
 screen.title("addresses")
 
 # create a database/connect to one
