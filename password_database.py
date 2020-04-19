@@ -2,10 +2,10 @@ from tkinter import *
 import sqlite3
 
 screen = Tk()
-screen.geometry("325x500")
+screen.geometry("400x500")
 screen.title("passwords")
 
-# create a database/connect to one
+# connet to database
 conn = sqlite3.connect("passwords_data.db")
 
 # create cursor
@@ -24,35 +24,17 @@ c.execute("""CREATE TABLE data (
         stockx text
         )""")
 '''
-def save():
-	# create a database/connect to one
-	conn = sqlite3.connect("passwords_data.db")
-
-	# create cursor
-	c = conn.cursor()
-
-	# add account to database
-	c.execute("INSERT INTO data VALUES (:username, :password, :email, :facebook, :instagram, :amazon, :goat, :stockx)", 
-            {
-                "username": username_entry.get(),
-                "password": password_entry.get(),
-                "email": email_entry.get(),
-                "facebook": facebook_entry.get(),
-                "instagram": instagram_entry.get(),
-                "amazon": amazon_entry.get(),
-                "goat": goat_entry.get(),
-                "stockx": stockx_entry.get()
-      		})      
-
-	# commit changes
-	conn.commit()
-
-    # close connection
-	conn.close()
 
 def sign_up():
 
 	# input passwords
+	global email_entry
+	global facebook_entry
+	global instagram_entry
+	global amazon_entry
+	global goat_entry
+	global stockx_entry
+
 	email_entry = Entry(screen, width = 30)
 	email_entry.grid(row = 4, column = 1, pady = (25, 0))
 
@@ -93,6 +75,31 @@ def sign_up():
 	save_button = Button(screen, text = "Save", height = 1, width = 5, command = save)
 	save_button.grid(row = 10, column = 0, columnspan = 2,  pady = (25, 0))
 
+def save():
+	# create a database/connect to one
+	conn = sqlite3.connect("passwords_data.db")
+
+	# create cursor
+	c = conn.cursor()
+
+	# add account to database
+	c.execute("INSERT INTO data VALUES (:username, :password, :email, :facebook, :instagram, :amazon, :goat, :stockx)", 
+            {
+                "username": username_entry.get(),
+                "password": password_entry.get(),
+                "email": email_entry.get(),
+                "facebook": facebook_entry.get(),
+                "instagram": instagram_entry.get(),
+                "amazon": amazon_entry.get(),
+                "goat": goat_entry.get(),
+                "stockx": stockx_entry.get()
+      		})      
+
+	# commit changes
+	conn.commit()
+
+    # close connection
+	conn.close()
 
 
 	
@@ -100,6 +107,12 @@ def sign_up():
 
 def sign_in():
 	return
+	
+
+
+
+
+
 
 
 
