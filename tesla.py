@@ -2,19 +2,19 @@ from tkinter import *
 from PIL import ImageTk, Image
 
 screen = Tk()
-screen.geometry("750x750")
-screen.title("Image")
+screen.geometry("760x750")
+screen.title("Tesla")
 
 # screen icon
-screen.iconbitmap("d:/JOEY/python_pics/tesla_logo.ico")
+screen.iconbitmap("/Users/jonathan/Desktop/python/python_pics/tesla_logo.ico")
 
 # add pic
-model_s = ImageTk.PhotoImage(Image.open("d:/JOEY/python_pics/model_s.JPG"))
-model_3 = ImageTk.PhotoImage(Image.open("d:/JOEY/python_pics/model_3.JPG"))
-model_x = ImageTk.PhotoImage(Image.open("d:/JOEY/python_pics/model_x.JPG"))
-model_y = ImageTk.PhotoImage(Image.open("d:/JOEY/python_pics/model_y.JPG"))
-roadster = ImageTk.PhotoImage(Image.open("d:/JOEY/python_pics/roadster.JPG"))
-cybertruck = ImageTk.PhotoImage(Image.open("d:/JOEY/python_pics/cybertruck.JPG"))
+model_s = ImageTk.PhotoImage(Image.open("/Users/jonathan/Desktop/python/python_pics/model_s.JPG"))
+model_3 = ImageTk.PhotoImage(Image.open("/Users/jonathan/Desktop/python/python_pics/model_3.JPG"))
+model_x = ImageTk.PhotoImage(Image.open("/Users/jonathan/Desktop/python/python_pics/model_x.JPG"))
+model_y = ImageTk.PhotoImage(Image.open("/Users/jonathan/Desktop/python/python_pics/model_y.JPG"))
+roadster = ImageTk.PhotoImage(Image.open("/Users/jonathan/Desktop/python/python_pics/roadster.JPG"))
+cybertruck = ImageTk.PhotoImage(Image.open("/Users/jonathan/Desktop/python/python_pics/cybertruck.JPG"))
 
 
 img_list = [model_s, model_3, model_x, model_y, roadster, cybertruck ]
