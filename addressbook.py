@@ -3,7 +3,7 @@ import sqlite3
 
 screen = Tk()
 screen.geometry("400x500")
-screen.title("addresses")
+screen.title(".")
 
 # create a database/connect to one
 conn = sqlite3.connect("address_book.db")
@@ -97,7 +97,7 @@ def save():
 # def update button
 def update():
 	editor = Tk()
-	editor.geometry("350x200")
+	editor.geometry("375x250")
 	editor.title("edit a record")
 
 
