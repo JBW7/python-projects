@@ -106,15 +106,92 @@ def save():
 	
 
 def sign_in():
-	return
+	view = Tk()
+	view.geometry("375x250")
+	view.title("View Passwords")
+
+
+	# create a database/connect to one
+	conn = sqlite3.connect("passwords_data.db")
+
+    # create cursor
+	c = conn.cursor()
+    
+	username_entered = username_entry.get()
+    
+    #select data from database
+	c.execute("SELECT * FROM data WHERE username = " + username_entered)
+	all_password = c.fetchall()
+	
 	
 
 
 
 
 
+	#create global variables for entrys
+	global email_view
+	global facebook_view
+	global instagram_view
+	global amazon_view
+	global goat_view
+	global stockx_view
+	    
 
 
+    # text box
+	email_view = Entry(view, width= 30)
+	email_view.grid(row= 0, column= 1, padx= 20, pady=(10,0))
+
+	facebook_view = Entry(view, width= 30)
+	facebook_view.grid(row= 1, column= 1)
+
+	instagram_view = Entry(view, width= 30)
+	instagram_view.grid(row= 2, column= 1)
+
+	amazon_view = Entry(view, width= 30)
+	amazon_view.grid(row= 3, column= 1)
+
+	goat_view = Entry(view, width= 30)
+	goat_view.grid(row= 4, column= 1)
+
+	stockx_view = Entry(view, width= 30)
+	stockx_view.grid(row= 5, column= 1)
+
+	
+	# text box label
+	email_view = Label(view, text = "Email")
+	email_view.grid(row= 0, column= 0, pady=(10,0))
+
+	facebook_view = Label(view, text = "Facebook")
+	facebook_view.grid(row= 1, column= 0)
+
+	instagram_view = Label(view, text = "Instagram")
+	instagram_view.grid(row= 2, column= 0)
+
+	amazon_view = Label(view, text = "Amazon")
+	amazon_view.grid(row= 3, column= 0)
+
+	goat_view = Label(view, text = "Goat")
+	goat_view.grid(row= 4, column= 0)
+
+	stockx_view = Label (view, text = "StockX")
+	stockx_view.grid(row = 5, column = 0)
+
+	# put results in text boxes
+	for password in all_password:
+		email_view.insert(0, record[2])
+		facebook_view.insert(0, record[3])
+		instagram_view.insert(0, record[4])
+		amazon_view.insert(0, record[5])
+		goat_view.insert(0, record[6])
+		stockx_view.insert(0, record[7])
+
+	# save button
+	done_button = Button(view, height = 1, width = 5, command = view.exit())
+	done_button.grid(row = 6, column = 0, columnspan = 2)
+
+	
 
 
 
