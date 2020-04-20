@@ -3,7 +3,7 @@ import sqlite3
 
 screen = Tk()
 screen.geometry("400x500")
-screen.title(".")
+screen.title("addreess book")
 
 # create a database/connect to one
 conn = sqlite3.connect("address_book.db")
@@ -266,7 +266,7 @@ zipcode_label.grid(row= 5, column= 0)
 
 delete_label = Label(screen, text = "ID")
 delete_label.grid(row= 8, column= 0, pady= 5)
-# button
+# submit button
 submit_button = Button(screen, text = "Add Data To Database", command = submit)
 submit_button.grid(row= 6, column= 0, columnspan= 2, padx= 10, pady= 10, ipadx= 100)
 
@@ -279,7 +279,7 @@ delete_button = Button(screen, text= "delete record", command= delete)
 delete_button.grid(row= 9, column= 0, columnspan= 2, padx= 10, pady= 10, ipadx= 125)
 
 # update button
-update_button = Button(screen, text= "edit record", command= update)
+update_button = Button(screen, text= "edit record", command=  update)
 update_button.grid(row= 10, column= 0, columnspan= 2, padx= 10, pady= 10, ipadx= 125)
 
 
