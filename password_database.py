@@ -120,7 +120,7 @@ def sign_in():
 	username_entered = username_entry.get()
     
     #select data from database
-	c.execute("SELECT * FROM data WHERE username = " + username_entered)
+	c.execute("SELECT * FROM data WHERE username  = " + username_entered)
 	all_password = c.fetchall()
 	
 	
