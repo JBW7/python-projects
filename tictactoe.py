@@ -25,7 +25,7 @@ class Warspyking(tk.Frame):
         self.btn.grid(row=0, column=0, sticky="nsew")
         self.config = self.btn.config
 
-font = ("Courier", 150)
+font = ("Courier", 175)
 
 # turn variable
 global turn
@@ -41,7 +41,7 @@ def button(position):
     
     if turn == 2:
         symbol = "O"
-
+    
     if turn == 3:
         symbol = "X"
 
@@ -61,7 +61,7 @@ def button(position):
         symbol = "O"
 
     if turn == 9:
-        symbol = "X"
+        state = DISABLED
 
     if position == 1 :
         button_1 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
@@ -99,14 +99,79 @@ def button(position):
         button_9 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_9.grid(row = 1, column = 0, padx = (355, 15), pady = (370, 50))
 
+    # player__
+    if turn == 1:
+        player_text = "PLAYER 2"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    if turn == 2:
+        player_text = "PLAYER 1"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    if turn == 3:
+        player_text = "PLAYER 2"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    if turn == 4:
+        player_text = "PLAYER 1"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    if turn == 5:
+        player_text = "PLAYER 2"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    if turn == 6:
+        player_text = "PLAYER 1"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    if turn == 7:
+        player_text = "PLAYER 2"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    if turn == 8:
+        player_text = "PLAYER 1"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+    # win/lose
     
-'''
-# player__
-turn_label = Label(screen, text = "player" + str(turn)
-turn_label.config(font=("Courier", 44))
-turn_label.config(anchor = CENTER)
-turn_label.grid(row = 0, column = 0, columnspan = 3)
-'''
+    
+
+
+# starting player__
+if turn == 0:
+        player_text = "PLAYER 1"
+        player_label = Label(screen, text = player_text)
+        player_label.config(font=("Courier", 44))
+        player_label.config(anchor = CENTER)
+        player_label.grid(row = 0, column = 0, columnspan = 3)
+
+
+
+
 
 
 
