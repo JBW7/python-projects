@@ -27,63 +27,86 @@ class Warspyking(tk.Frame):
 
 font = ("Courier", 150)
 
-
+# turn variable
+global turn
+turn = 0
 
 # def button
 def button(position):
+    global turn
+    turn += 1
+
+    if turn == 1:
+        symbol = "X"
+    
+    if turn == 2:
+        symbol = "O"
+
+    if turn == 3:
+        symbol = "X"
+
+    if turn == 4:
+        symbol = "O"
+
+    if turn == 5:
+        symbol = "X"
+
+    if turn == 6:
+        symbol = "O"
+
+    if turn == 7:
+        symbol = "X"
+
+    if turn == 8:
+        symbol = "O"
+
+    if turn == 9:
+        symbol = "X"
+
     if position == 1 :
-        button_1 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_1 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_1.grid(row = 1, column = 0, padx = (17, 350), pady = (23, 365))
 
     if position == 2 :
-        button_2 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_2 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_2.grid(row = 1, column = 0, padx = (17, 350), pady = (195, 200))
 
     if position == 3 :
-        button_3 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_3 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_3.grid(row = 1, column = 0, padx = (17, 350), pady = (370, 50))
     
     if position == 4 :
-        button_4 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_4 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_4.grid(row = 1, column = 0, padx = (179, 180), pady = (23, 365))
 
     if position == 5 :
-        button_5 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_5 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_5.grid(row = 1, column = 0, padx = (179, 180), pady = (195, 200))
 
     if position == 6 :
-        button_6 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_6 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_6.grid(row = 1, column = 0, padx = (179, 180), pady = (370, 50))
     
     if position == 7 :
-        button_7 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_7 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_7.grid(row = 1, column = 0, padx = (355, 15), pady = (23, 365))
 
     if position == 8 :
-        button_8 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_8 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_8.grid(row = 1, column = 0, padx = (355, 15), pady = (195, 200))
 
     if position == 9 :
-        button_9 = Warspyking(screen, text = "X", height = 9, width = 17, font = font )
+        button_9 = Warspyking(screen, text = symbol, height = 9, width = 17, font = font )
         button_9.grid(row = 1, column = 0, padx = (355, 15), pady = (370, 50))
 
     
-
-
-    
-        
-
-
-
 '''
-# turn
-initial_turn = "1"
-turn = Label(screen, text = "player" + initial_turn)
-turn.config(font=("Courier", 44))
-turn.config(anchor = CENTER)
-turn.grid(row = 0, column = 0, columnspan = 3)
+# player__
+turn_label = Label(screen, text = "player" + str(turn)
+turn_label.config(font=("Courier", 44))
+turn_label.config(anchor = CENTER)
+turn_label.grid(row = 0, column = 0, columnspan = 3)
 '''
-
 
 
 
