@@ -4,7 +4,7 @@ import math
 
 screen = Tk()
 screen.title("calculator")
-screen.geometry("380x457")
+screen.geometry("473x457")
 
 
 #entry
@@ -19,6 +19,7 @@ def button_click(number):
     entry.delete(0,END)
     entry.insert(0,str(current) + str(number))
 
+
 def button_clear():
     entry.delete(0,END)
 
@@ -27,7 +28,7 @@ def button_add():
     global f_numb
     global action
     action="add"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
     entry.delete(0, END)
     
 def button_substract():
@@ -35,7 +36,7 @@ def button_substract():
     global f_numb
     global action
     action="substract"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
     entry.delete(0, END)
 
 def button_multiply():
@@ -43,7 +44,7 @@ def button_multiply():
     global f_numb
     global action
     action="multiply"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
     entry.delete(0, END)
 
 def button_divide():
@@ -51,7 +52,7 @@ def button_divide():
     global f_numb
     global action
     action="divide"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
     entry.delete(0, END)
 
 def button_sqrt():
@@ -59,14 +60,14 @@ def button_sqrt():
     global f_numb
     global action
     action="sqrt"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
     
 def button_power_to():
     first_number = entry.get()
     global f_numb
     global action
     action="power_to"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
     entry.delete(0, END)
 
 def button_percent():
@@ -74,7 +75,7 @@ def button_percent():
     global f_numb
     global action
     action="percent"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
     entry.delete(0, END)
 
 def button_pi():
@@ -82,29 +83,35 @@ def button_pi():
     global f_numb
     global action
     action="pi"
-    f_numb= int(first_number)
+    f_numb= float(first_number)
+    
+def button_comma():
+    current= entry.get()
+    entry.delete(0, END)
+    entry.insert(0,str(current) + "." )
     
 def button_equal():
     second_number = entry.get()
     entry.delete(0, END)
     if action=="add":
-        entry.insert(0,f_numb + int(second_number))
+        entry.insert(0,f_numb + float(second_number))
     if action=="substract":
-        entry.insert(0,f_numb - int(second_number))
+        entry.insert(0,f_numb - float(second_number))
     if action=="multiply":
-        entry.insert(0,f_numb * int(second_number))
+        entry.insert(0,f_numb * float(second_number))
     if action=="divide":
-        entry.insert(0,f_numb / int(second_number))
+        entry.insert(0,f_numb / float(second_number))
     if action=="sqrt":
         entry.insert(0, math.sqrt(f_numb))
     if action=="power_to":
-        entry.insert(0,f_numb ** int(second_number))
+        entry.insert(0,f_numb ** float(second_number))
     if action=="percent":
         entry.insert(0,f_numb / 100)
     if action=="pi":
         entry.insert(0, f_numb * 22/7)
-
-
+        
+  
+   
 #button
 button_1=Button(screen, text="1", height = 5, width = 10, command=lambda: button_click(1))
 button_2=Button(screen, text="2", height = 5, width = 10, command=lambda: button_click(2))
@@ -126,6 +133,7 @@ button_sqrt=Button(screen, text="√", height = 5, width = 10, command=button_sq
 button_power_to=Button(screen, text="^", height = 5, width = 10, command=button_power_to)
 button_percent=Button(screen, text="%", height = 5, width = 10, command=button_percent)
 button_pi=Button(screen, text="π", height = 5, width = 10, command=button_pi)
+button_comma = Button(screen, text = ".", height = 5, width = 10, command = button_comma)
 
 
 button_1.grid(row=3, column=0 )
@@ -152,6 +160,8 @@ button_sqrt.grid(row=5, column=0)
 button_power_to.grid(row=5, column=1)
 button_percent.grid(row=5, column=2)
 button_pi.grid(row=5, column=3)
+ 
+button_comma.grid(row = 1, column = 4)
 
 
 screen.mainloop()
