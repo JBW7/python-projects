@@ -12,13 +12,11 @@ entry = Entry(screen, width=50, borderwidth=5)
 entry.grid(row=0, column=0, columnspan=5)
 
 
-
 #button function
 def button_click(number):
     current= entry.get()
     entry.delete(0,END)
     entry.insert(0,str(current) + str(number))
-
 
 def button_clear():
     entry.delete(0,END)
