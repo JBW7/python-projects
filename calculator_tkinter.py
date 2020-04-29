@@ -167,36 +167,35 @@ button_10_power = Button(screen, text = "10^x" , height = 5, width = 10, command
 button_quit = Button(screen, text = "EXIT" , height = 5, width = 10, command = screen.quit)
 
 
-button_1.grid(row=3, column=0 )
-button_2.grid(row=3, column=1 )
-button_3.grid(row=3, column=2 )
-button_multiply.grid(row=3, column=3)
+button_7.grid(row=1, column=0 )
+button_8.grid(row=1, column=1 )
+button_9.grid(row=1, column=2 )
+button_add.grid(row=1, column=3)
+button_sqrt.grid(row=1, column=4)
 
 button_4.grid(row=2, column=0 )
 button_5.grid(row=2, column=1 )
 button_6.grid(row=2, column=2 )
 button_substract.grid(row=2, column=3)
+button_cuberoot.grid(row = 2, column = 4)
 
-button_7.grid(row=1, column=0 )
-button_8.grid(row=1, column=1 )
-button_9.grid(row=1, column=2 )
-button_add.grid(row=1, column=3)
+button_1.grid(row=3, column=0 )
+button_2.grid(row=3, column=1 )
+button_3.grid(row=3, column=2 )
+button_multiply.grid(row=3, column=3)
+button_power_2.grid(row = 3, column = 4)
 
 button_0.grid(row=4, column=1 )
 button_clear.grid(row=4, column=0)
 button_equal.grid(row=4, column=2)
 button_divide.grid(row=4, column=3)
+button_10_power.grid(row = 4, column = 4)
 
-button_sqrt.grid(row=5, column=0)
+button_comma.grid(row=5, column=0)
 button_power_to.grid(row=5, column=1)
 button_percent.grid(row=5, column=2)
 button_pi.grid(row=5, column=3)
- 
-button_comma.grid(row = 1, column = 4)
-button_cuberoot.grid(row = 2, column = 4)
-button_power_2.grid(row = 3, column = 4)
-button_10_power.grid(row = 4, column = 4)
-
 button_quit.grid(row = 5, column = 4)
+ 
 
 screen.mainloop()
