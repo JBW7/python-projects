@@ -28,16 +28,6 @@ class Warspyking(tk.Frame):
 
 font = ("Courier", 175)
 
-global position_1
-global position_2
-global position_3
-global position_4
-global position_5
-global position_6
-global position_7
-global position_8
-global position_9
-
 position_1 = ''
 position_2 = ''
 position_3 = ''
@@ -289,7 +279,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("1")
         return True
     
     elif position_1 == "player_2_1" and position_2 == "player_2_2" and position_3 == "player_2_3":
@@ -297,15 +286,14 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("2")
         return True
+    
     ################################### COLUMN 2
     elif position_4 == "player_1_4" and position_5 == "player_1_5" and position_6 == "player_1_6":
         winner_label = Label(screen, text = "WINNER = PLAYER 1")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("3")
         return True
             
     elif position_4 == "player_2_4" and position_5 == "player_2_5" and position_6 == "player_2_6":
@@ -313,7 +301,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("4")
         return True
                 
     ################################### COLUMN 3
@@ -322,7 +309,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("5")
         return True
                     
     elif position_7 == "player_2_7" and position_8 == "player_2_8" and position_9 == "player_2_9":
@@ -330,7 +316,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("6")
         return True
                         
     ################################### ROW 1
@@ -339,7 +324,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("7")
         return True
                             
     elif position_1 == "player_2_1" and position_4 == "player_2_4" and position_7 == "player_2_7":
@@ -347,7 +331,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("8")
         return True
                             
     ################################### ROW 2
@@ -356,7 +339,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("9")
         return True
     
     elif position_2 == "player_1_2" and position_5 == "player_1_5" and position_8 == "player_1_8":
@@ -364,7 +346,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("10")
         return True
                                     
     ################################### ROW 3
@@ -373,7 +354,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("11")
         return True
         
     elif position_3 == "player_2_3" and position_6 == "player_2_6" and position_9 == "player_2_9":
@@ -381,7 +361,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("12")
         return True
                                             
     ################################### DIAGONAL 1
@@ -390,7 +369,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("13")
         return True
     
     elif position_1 == "player_2_1" and position_5 == "player_2_5" and position_9 == "player_2_9":
@@ -398,7 +376,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("14")
         return True
             
     ################################### DIAGONAL 2
@@ -407,7 +384,6 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
-        print("15")
         return True
     
     elif position_3 == "player_2_3" and position_5 == "player_2_5" and position_7 == "player_2_7":
@@ -415,16 +391,17 @@ def choose_winner():
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3) 
-        print("16")
         return True
 
+    ################################### NONE
     else:
         winner_label = Label(screen, text = "DRAW")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
-        winner_label.grid(row = 0, column = 0, columnspan = 3)                                                           
-
+        winner_label.grid(row = 0, column = 0, columnspan = 3)   
         
+                                                             
+
 # starting player__
 if turn == 0:
         player_text = "PLAYER 1"
@@ -433,42 +410,34 @@ if turn == 0:
         player_label.config(anchor = CENTER)
         player_label.grid(row = 0, column = 0, columnspan = 3)
 
+
 # def clear button
 def clear():
-    #if button_1_clicked:
-    
     button_1_clicked.grid(row = 1, column = 0, padx = (17, 350), pady = (23, 365))
     button_1_clicked.grid_forget()
-    #if button_2_clicked:
     
     button_2.grid(row = 1, column = 0, padx = (17, 350), pady = (195, 200))
     button_2_clicked.grid_forget()
-    #if button_3_clicked:
-    
+   
     button_3.grid(row = 1, column = 0, padx = (17, 350), pady = (370, 50))
     button_3_clicked.grid_forget()
-    #if button_4_clicked:
+   
     button_4.grid(row = 1, column = 0, padx = (179, 180), pady = (23, 365))
-
     button_4_clicked.grid_forget()
-    #if button_5_clicked:
+    
     button_5.grid(row = 1, column = 0, padx = (179, 180), pady = (195, 200))
     button_5_clicked.grid_forget()
-    #if button_6_clicked:
+    
     button_6.grid(row = 1, column = 0, padx = (179, 180), pady = (370, 50))
-
     button_6_clicked.grid_forget()
-    #if button_7_clicked:
+    
     button_7.grid(row = 1, column = 0, padx = (355, 15), pady = (23, 365))
-
     button_7_clicked.grid_forget()
-    #if button_8_clicked:
+   
     button_8.grid(row = 1, column = 0, padx = (355, 15), pady = (195, 200))
-
     button_8_clicked.grid_forget()
-    #if button_9_clicked:
+    
     button_9.grid(row = 1, column = 0, padx = (355, 15), pady =(370, 50))
-
     button_9_clicked.grid_forget()
 
 
