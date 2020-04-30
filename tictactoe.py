@@ -149,61 +149,91 @@ def button(position):
 
     # player__
     if turn == 1:
+        global player_label_1
         player_text = "PLAYER 2"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_1 = Label(screen, text = player_text)
+        player_label_1.config(font=("Courier", 44))
+        player_label_1.config(anchor = CENTER)
+        player_label_1.grid(row = 0, column = 0, columnspan = 3)
 
     if turn == 2:
+        global player_label_2
         player_text = "PLAYER 1"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_2 = Label(screen, text = player_text)
+        player_label_2.config(font=("Courier", 44))
+        player_label_2.config(anchor = CENTER)
+        player_label_2.grid(row = 0, column = 0, columnspan = 3)
 
     if turn == 3:
+        global player_label_3
         player_text = "PLAYER 2"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_3 = Label(screen, text = player_text)
+        player_label_3.config(font=("Courier", 44))
+        player_label_3.config(anchor = CENTER)
+        player_label_3.grid(row = 0, column = 0, columnspan = 3)
 
     if turn == 4:
+        global player_label_4
         player_text = "PLAYER 1"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_4 = Label(screen, text = player_text)
+        player_label_4.config(font=("Courier", 44))
+        player_label_4.config(anchor = CENTER)
+        player_label_4.grid(row = 0, column = 0, columnspan = 3)
 
     if turn == 5 and not choose_winner():
+        global player_label_5
         player_text = "PLAYER 2"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_5 = Label(screen, text = player_text)
+        player_label_5.config(font=("Courier", 44))
+        player_label_5.config(anchor = CENTER)
+        player_label_5.grid(row = 0, column = 0, columnspan = 3)
 
     if turn == 6 and not choose_winner():
+        global player_label_6
         player_text = "PLAYER 1"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_6 = Label(screen, text = player_text)
+        player_label_6.config(font=("Courier", 44))
+        player_label_6.config(anchor = CENTER)
+        player_label_6.grid(row = 0, column = 0, columnspan = 3)
 
     if turn == 7 and not choose_winner():
+        global player_label_7
         player_text = "PLAYER 2"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_7 = Label(screen, text = player_text)
+        player_label_7.config(font=("Courier", 44))
+        player_label_7.config(anchor = CENTER)
+        player_label_7.grid(row = 0, column = 0, columnspan = 3)
 
     if turn == 8 and not choose_winner():
-        player_text = "PLAYER 1"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_0.grid(row = 0, column = 0, columnspan = 3)
+        player_label_0.grid_forget()
+        
+        player_label_1.grid(row = 0, column = 0, columnspan = 3)
+        player_label_1.grid_forget()
 
+        player_label_2.grid(row = 0, column = 0, columnspan = 3)
+        player_label_2.grid_forget()
+
+        player_label_3.grid(row = 0, column = 0, columnspan = 3)
+        player_label_3.grid_forget()
+
+        player_label_4.grid(row = 0, column = 0, columnspan = 3)
+        player_label_4.grid_forget()
+
+        player_label_5.grid(row = 0, column = 0, columnspan = 3)
+        player_label_5.grid_forget()
+
+        player_label_6.grid(row = 0, column = 0, columnspan = 3)
+        player_label_6.grid_forget()
+
+        player_label_7.grid(row = 0, column = 0, columnspan = 3)
+        player_label_7.grid_forget()
+
+        draw_label = Label(screen, text = "DRAW")
+        draw_label.config(font=("Courier", 44))
+        draw_label.config(anchor = CENTER)
+        draw_label.grid(row = 0, column = 0, columnspan = 3)
+        
 
 def assign_position(position, player):
     global position_1
@@ -393,21 +423,17 @@ def choose_winner():
         winner_label.grid(row = 0, column = 0, columnspan = 3) 
         return True
 
-    ################################### NONE
-    else:
-        winner_label = Label(screen, text = "DRAW")
-        winner_label.config(font=("Courier", 44))
-        winner_label.config(anchor = CENTER)
-        winner_label.grid(row = 0, column = 0, columnspan = 3) 
-          
+    ################################### NONE 
+    # ELSE LINE 200
         
 # starting player__
 if turn == 0:
+        global player_label_0
         player_text = "PLAYER 1"
-        player_label = Label(screen, text = player_text)
-        player_label.config(font=("Courier", 44))
-        player_label.config(anchor = CENTER)
-        player_label.grid(row = 0, column = 0, columnspan = 3)
+        player_label_0 = Label(screen, text = player_text)
+        player_label_0.config(font=("Courier", 44))
+        player_label_0.config(anchor = CENTER)
+        player_label_0.grid(row = 0, column = 0, columnspan = 3)
 
 
 # def clear button
@@ -446,10 +472,10 @@ def clear():
     winner_label.grid_forget()
 
     player_text = "PLAYER 1"
-    player_label = Label(screen, text = player_text)
-    player_label.config(font=("Courier", 44))
-    player_label.config(anchor = CENTER)
-    player_label.grid(row = 0, column = 0, columnspan = 3)
+    player_label_0 = Label(screen, text = player_text)
+    player_label_0.config(font=("Courier", 44))
+    player_label_0.config(anchor = CENTER)
+    player_label_0.grid(row = 0, column = 0, columnspan = 3)
 
 
 # button
