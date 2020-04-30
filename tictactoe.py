@@ -271,7 +271,7 @@ def assign_position(position, player):
         position_9 = "player_2_9"
     
 def choose_winner():
-
+    global winner_label
     # WIN/LOSE
     ################################### COLUMN 1
     if position_1 == "player_1_1" and position_2 == "player_1_2" and position_3 == "player_1_3":
@@ -398,10 +398,9 @@ def choose_winner():
         winner_label = Label(screen, text = "DRAW")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
-        winner_label.grid(row = 0, column = 0, columnspan = 3)   
+        winner_label.grid(row = 0, column = 0, columnspan = 3) 
+          
         
-                                                             
-
 # starting player__
 if turn == 0:
         player_text = "PLAYER 1"
@@ -440,6 +439,17 @@ def clear():
     button_9.grid(row = 1, column = 0, padx = (355, 15), pady =(370, 50))
     button_9_clicked.grid_forget()
 
+    global turn
+    turn = 0
+
+    winner_label.grid(row = 0, column = 0, columnspan = 3) 
+    winner_label.grid_forget()
+
+    player_text = "PLAYER 1"
+    player_label = Label(screen, text = player_text)
+    player_label.config(font=("Courier", 44))
+    player_label.config(anchor = CENTER)
+    player_label.grid(row = 0, column = 0, columnspan = 3)
 
 
 # button
