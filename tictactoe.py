@@ -3,7 +3,7 @@ import tkinter as tk
 
 
 screen = Tk()
-screen.geometry("530x780")
+screen.geometry("530x819")
 screen.title("Tic Tac Toe")
 
 
