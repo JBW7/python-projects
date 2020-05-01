@@ -305,14 +305,14 @@ def choose_winner():
     # WIN/LOSE
     ################################### COLUMN 1
     if position_1 == "player_1_1" and position_2 == "player_1_2" and position_3 == "player_1_3":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
     
     elif position_1 == "player_2_1" and position_2 == "player_2_2" and position_3 == "player_2_3":
-        winner_label = Label(screen, text = "WINNER = PLAYER 2")
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
@@ -320,14 +320,14 @@ def choose_winner():
     
     ################################### COLUMN 2
     elif position_4 == "player_1_4" and position_5 == "player_1_5" and position_6 == "player_1_6":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
             
     elif position_4 == "player_2_4" and position_5 == "player_2_5" and position_6 == "player_2_6":
-        winner_label = Label(screen, text = "WINNER = PLAYER 2")
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
@@ -335,14 +335,14 @@ def choose_winner():
                 
     ################################### COLUMN 3
     elif position_7 == "player_1_7" and position_8 == "player_1_8" and position_9 == "player_1_9":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
                     
     elif position_7 == "player_2_7" and position_8 == "player_2_8" and position_9 == "player_2_9":
-        winner_label = Label(screen, text = "WINNER = PLAYER 2")
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
@@ -350,14 +350,14 @@ def choose_winner():
                         
     ################################### ROW 1
     elif position_1 == "player_1_1" and position_4 == "player_1_4" and position_7 == "player_1_7":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
                             
     elif position_1 == "player_2_1" and position_4 == "player_2_4" and position_7 == "player_2_7":
-        winner_label = Label(screen, text = "WINNER = PLAYER 2")
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
@@ -365,14 +365,14 @@ def choose_winner():
                             
     ################################### ROW 2
     elif position_2 == "player_1_2" and position_5 == "player_1_5" and position_8 == "player_1_8":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
     
-    elif position_2 == "player_1_2" and position_5 == "player_1_5" and position_8 == "player_1_8":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+    elif position_2 == "player_2_2" and position_5 == "player_2_5" and position_8 == "player_2_8":
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
@@ -380,14 +380,14 @@ def choose_winner():
                                     
     ################################### ROW 3
     elif position_3 == "player_1_3" and position_6 == "player_1_6" and position_9 == "player_1_9":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
         
     elif position_3 == "player_2_3" and position_6 == "player_2_6" and position_9 == "player_2_9":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
@@ -395,14 +395,14 @@ def choose_winner():
                                             
     ################################### DIAGONAL 1
     elif position_1 == "player_1_1" and position_5 == "player_1_5" and position_9 == "player_1_9":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
     
     elif position_1 == "player_2_1" and position_5 == "player_2_5" and position_9 == "player_2_9":
-        winner_label = Label(screen, text = "WINNER = PLAYER 2")
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
@@ -410,14 +410,14 @@ def choose_winner():
             
     ################################### DIAGONAL 2
     elif position_3 == "player_1_3" and position_5 == "player_1_5" and position_7 == "player_1_7":
-        winner_label = Label(screen, text = "WINNER = PLAYER 1")
+        winner_label = Label(screen, text = "PLAYER 1 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3)
         return True
     
     elif position_3 == "player_2_3" and position_5 == "player_2_5" and position_7 == "player_2_7":
-        winner_label = Label(screen, text = "WINNER = PLAYER 2")
+        winner_label = Label(screen, text = "PLAYER 2 WINS")
         winner_label.config(font=("Courier", 44))
         winner_label.config(anchor = CENTER)
         winner_label.grid(row = 0, column = 0, columnspan = 3) 
