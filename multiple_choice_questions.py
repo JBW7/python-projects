@@ -25,5 +25,4 @@ def run_test(questions):
 
     print("You Scored " + str(score) + " Out Of " + str(len(questions)))
 
-
 run_test(questions)
