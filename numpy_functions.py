@@ -38,6 +38,11 @@ print(np.cos(np.deg2rad(90)))
 # TAN
 print(np.tan(np.deg2rad(90)))
 
+# LOG
+print(np.log(10000)) # LOG
+
+print (np.log10(10000)) # LOG 10
+
 
 ##################################################################################### CREATING ARRAYS
 print("CREATE ARRAYS ###############################################")
@@ -78,11 +83,11 @@ print(np.random.choice(l, 10)) # 10 VALUES
 
 ######################################################################################## LINEAR ALGEBRA
 print ("LINEAR ALGREBRA ###############################################")
-'''
-equation :
-3x - 5y = 5
-4x + 2y = 24
-'''
+
+#  equation :
+#  3x - 5y = 5
+#  4x + 2y = 24
+
 
 a = [[3, -5], [4, 2]] # VALUE BEFORE VARIABLE
 b = [5, 24] # RESULT OF EQUATION
@@ -91,6 +96,9 @@ print(np.linalg.solve(a, b))
 
 ############################################################################################ MATRIX
 print ("MATRIX ###############################################")
+# SOURCE : 
+# https://www.programiz.com/python-programming/matrix
+
 # CREATE A MATRIX
 m = np.matrix([[7, 4, 2], [3, 5, 6], [8, 2, 3]])
 
@@ -106,14 +114,19 @@ m2 = np.array([[26, 32, 39], [201, 523, 101]])
 
 m3 = np.array([[10, 20, 30], [29, 39, 21]])
 m4 = np.array([[26], [32], [39]])
+m5 = np.array([13])
 
 # ADD MATRICES
 print(m1 + m2)
 
 # MULTIPLY MATRICES
-print(m3.dot(m4))
+print(m3.dot(m4)) # 2 MATRICES
+
+print(m3.dot(m4).dot(m5)) # 3 MATRICES
 
 # TRANSPOSE MATRIX
 print(m1.transpose())
 
-# https://www.programiz.com/python-programming/matrix
+
+
+
