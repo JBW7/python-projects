@@ -43,8 +43,8 @@ class Person:
 	def stand_up(self):
 		self.is_sitting = False 
 
-person1 = Person(self, "john", "high temper", True)
-person2 = Person(self, "bobby", "funny", False)
+person1 = Person("john", "high temper", True)
+person2 = Person("bobby", "funny", False)
 
 # robot owned
 person1.robot_owned = robot2
