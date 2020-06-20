@@ -15,7 +15,7 @@ def speak():
 
     engine.runAndWait()
 
-    phrase.delete(0, END)
+    text.delete(0, END)
 
 text = Entry(root, width = 13, font = ("Courier New", 40))
 text.pack(pady = (20, 0))
