@@ -17,6 +17,9 @@ arc = canvas.create_arc(10,400, 200,600, extent = 90, fill = "orange" ) # extent
 
 text = canvas.create_text(20, 30, anchor=W, font="Purisa", text="this is a text")
 
+img = PhotoImage(file = "/Users/jonathan/Desktop/python/python_pics/check.png")
+image = canvas.create_image(0, 0, image = img, anchor = NW) 
+
 
 
 canvas.pack()
