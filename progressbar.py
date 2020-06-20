@@ -11,8 +11,8 @@ indeterminate = only spots
 '''
 
 def start_p():
-    for x in range(10) :
-        progressbar["value"] += 5
+    for x in range(5) :
+        progressbar["value"] += 20
 
         root.update_idletasks()
 
