@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=ZDa-Z5JzLYM
+
 class Robot:
 	def __init__(self, name, color, weight):	
 		self.name = name
